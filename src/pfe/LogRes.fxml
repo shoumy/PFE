@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="hbox" layoutX="5.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="890.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pfe.LogResController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="294.0" spacing="30.0">
+         <children>
+            <Label fx:id="lm" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="295.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lins" alignment="CENTER" layoutX="10.0" layoutY="65.0" prefHeight="25.0" prefWidth="296.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="ldate" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="295.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lw" alignment="CENTER" layoutY="138.0" prefHeight="25.0" prefWidth="295.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="ln" alignment="CENTER" layoutY="184.0" prefHeight="25.0" prefWidth="301.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lcalc" layoutX="90.0" layoutY="343.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ProgressIndicator fx:id="pidicateur" layoutX="80.0" layoutY="390.0" prefHeight="75.0" prefWidth="75.0" visible="false" />
+         </children>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="600.0">
+            <children>
+                <TableView fx:id="tableView" layoutX="125.0" layoutY="240.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0">
+                    <columns>
+                        <TableColumn prefWidth="100.0" text="Index">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="id" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="57.0" text="demande">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="d" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="238.0" text="fréquences">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="f" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+                <Label layoutX="266.0" layoutY="8.0" text="Résultats">
+                    <font>
+                        <Font name="Arial" size="27.0" />
+                    </font>
+                </Label>
+            <Separator orientation="VERTICAL" prefHeight="518.0" prefWidth="7.0" />
+            <Pane layoutX="122.0" layoutY="60.0" prefHeight="138.0" prefWidth="400.0">
+               <children>
+                      <Label layoutX="3.0" text="Temps d'exécution:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                      <Label fx:id="lexec" layoutX="195.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="4.0" layoutY="51.0" text="Valeur optimale:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lval" layoutX="195.0" layoutY="51.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <HBox alignment="CENTER" layoutX="-1.0" layoutY="460.0" prefHeight="37.0" prefWidth="644.0" spacing="100.0">
+               <children>
+                  <Button layoutX="287.0" layoutY="460.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonPrecedent" prefWidth="95.0" text="Précédent">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="acceuil" layoutX="10.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonAcceuil" prefWidth="95.0" text="Acceuil">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Label fx:id="lparam" alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="200.0" prefHeight="17.0" prefWidth="591.0" />
+            </children>
+        </Pane>
+   </children>
+</HBox>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="hbox" layoutX="5.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="890.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pfe.GenererBenchController">
+    <children>
+        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="890.0">
+            <children>
+                <HBox alignment="CENTER" layoutY="442.0" prefHeight="37.0" prefWidth="890.0" spacing="40.0">
+                    <children>
+                        <Button fx:id="sauv" layoutX="226.0" layoutY="407.0" mnemonicParsing="false" onAction="#handleButtonSauv" prefHeight="37.0" prefWidth="170.0" text="Lancer la génération">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="acceuil" layoutX="500.0" layoutY="407.0" mnemonicParsing="false" onAction="#handleButtonAcceuil" prefHeight="37.0" prefWidth="170.0" text="Acceuil">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+                <ProgressIndicator fx:id="pidicateur" layoutX="405.0" layoutY="380.0" prefHeight="80.0" prefWidth="80.0" progress="0.0" visible="false" />
+                <Label layoutX="313.0" layoutY="30.0" text="Générateur d'instances">
+                    <font>
+                        <Font name="Arial Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lerreur" alignment="CENTER" layoutX="103.0" layoutY="398.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="685.0" textAlignment="CENTER" textFill="RED">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+            <VBox layoutX="113.0" layoutY="81.0" prefHeight="308.0" prefWidth="665.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Label text="Instance de coloration simple" />
+                        <Label fx:id="bname" />
+                        <Button fx:id="bcharger" mnemonicParsing="false" onAction="#handleButtonCharger" text="Charger" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+                     <children>
+                        <Label text="Tailles du spectre de fréquences NF" />
+                        <TextField fx:id="NF" text="200" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+                     <children>
+                        <Label text="Nombre minimal de trx par cellule" />
+                        <TextField fx:id="NbTrxMin" text="5" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="132.0" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+                     <children>
+                        <Label text="Nombre maximal de trx par cellule" />
+                        <TextField fx:id="NbTrxMax" text="10" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+                     <children>
+                        <Label text="Tailles minimale de la liste des fréquences permises" />
+                        <TextField fx:id="fpmin" text="120" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="208.0" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+                     <children>
+                        <Label text="Tailles maximale de la liste des fréquences permises" />
+                        <TextField fx:id="fpmax" text="150" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            </children>
+        </Pane>
+    </children>
+</HBox>

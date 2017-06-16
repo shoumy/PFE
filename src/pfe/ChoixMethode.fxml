@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="hbox" alignment="CENTER" layoutX="5.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="890.0" spacing="30.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pfe.ChoixMethodeController">
+   <children>
+      <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonSequentiel" prefHeight="45.0" prefWidth="250.0" text="Version séquentielle">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="315.0" layoutY="214.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonResoudreStr1" prefHeight="45.0" prefWidth="250.0" text="Stratégie PopGpuSolTh">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="315.0" layoutY="285.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonResoudreStr2" prefHeight="45.0" prefWidth="250.0" text="Stratégie PopBlockSolTh">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="315.0" layoutY="248.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonResoudreStr3" prefHeight="45.0" prefWidth="250.0" text="Stratégie hybride">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="acceuil" layoutX="315.0" layoutY="285.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonAcceuil" prefHeight="45.0" prefWidth="250.0" text="Acceuil">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</VBox>

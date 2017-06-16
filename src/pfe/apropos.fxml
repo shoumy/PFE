@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="555.0" prefWidth="563.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pfe.AproposController">
+    <top>
+        <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="200.0" style="-fx-border-color: #000000; -fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="titre" alignment="CENTER" contentDisplay="CENTER" text="À Propos" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                    </font>
+                </Label>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </BorderPane.margin>
+        </HBox>
+    </top>
+    <center>
+        <ScrollPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="455.0" prefWidth="540.0" style="-fx-border-color: #000000;" BorderPane.alignment="CENTER">
+            <content>
+                <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="477.0" prefWidth="550.0" style="-fx-background-color: #FFFFFF;">
+                    <children>
+                  <VBox alignment="CENTER" layoutX="1.0" prefHeight="346.0" prefWidth="545.0" spacing="15.0">
+                     <children>
+                        <HBox alignment="TOP_CENTER" spacing="300.0">
+                           <children>
+                              <ImageView fitHeight="126.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../photos/ESI.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="70.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../photos/paf.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label prefHeight="25.0" prefWidth="525.0" text="Nous proposons une implémentation parallèle sur GPU  de l’algorithme " textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="25.0" prefWidth="525.0" text="des colonies d’abeilles artificielles pour la résolution du problème de" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="25.0" prefWidth="525.0" text="multi-coloration de graphe par listes qui modélise le problème " textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="10.0" layoutY="60.0" prefHeight="25.0" prefWidth="525.0" text="d’affection de fréquences." textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER" spacing="150.0">
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label layoutX="30.0" layoutY="155.0" text="Realisé par:">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="51.0" layoutY="242.0" text="- KANDI Mohamed Ali">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="51.0" layoutY="259.0" text="- MECHRI Aberrahmane">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <Label layoutX="30.0" layoutY="155.0" text="Encadré par:">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="51.0" layoutY="242.0" text="- BENATCHBA Karima">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="51.0" layoutY="259.0" text="- BENDJOUDI Ahcène">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="65.0" text="- HADJI Riad">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="90.0" text="- YAHIAOUI Saïd">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Label layoutX="30.0" layoutY="155.0" text="Promotion:">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="51.0" layoutY="242.0" text="2016-2017">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                              <Button fx:id="closeButton" mnemonicParsing="false" onAction="#Quitter" prefHeight="44.0" prefWidth="98.0" text="Fermer">
+                                  <font>
+                                      <Font size="20.0" />
+                                  </font>
+                              </Button>
+                     </children>
+                  </VBox>
+                    </children>
+                </AnchorPane>
+            </content>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" />
+            </BorderPane.margin>
+        </ScrollPane>
+    </center>
+</BorderPane>
