@@ -24,7 +24,7 @@
                </Button>
                <Label fx:id="lcharge" alignment="CENTER" layoutY="94.0" prefHeight="25.0" prefWidth="244.0" text="Aucune instance chargée">
                   <font>
-                     <Font size="16.0" />
+                     <Font size="10.0" />
                   </font>
                </Label>
                <Label fx:id="ln" alignment="CENTER" layoutY="184.0" prefHeight="25.0" prefWidth="244.0">
@@ -59,6 +59,14 @@
                   <TextField fx:id="P_A" prefHeight="25.0" prefWidth="60.0" text="0.8" />
                   <Label layoutX="10.0" layoutY="10.0" text="P_E" />
                   <TextField fx:id="P_E" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="60.0" text="0.2" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="233.0" spacing="10.0">
+               <children>
+                  <Label text="NBB" />
+                  <TextField fx:id="NBE1" prefHeight="25.0" prefWidth="60.0" />
+                  <Label layoutX="10.0" layoutY="10.0" text="NBI" />
+                  <TextField fx:id="NBO1" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="60.0" text="32" />
                </children>
             </HBox>
                <Button fx:id="bcal" disable="true" layoutX="52.0" layoutY="306.0" mnemonicParsing="false" onAction="#handleButtonLancer" text="Lancer le Calcul">

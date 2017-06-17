@@ -59,9 +59,17 @@ public class Str2Controller implements Initializable {
     @FXML
     TextField CA;
     @FXML
-    TextField P_A;
+    TextField P_A_MIN;
     @FXML
-    TextField P_E;
+    TextField P_E_MIN;
+    @FXML
+    TextField P_A_MAX;
+    @FXML
+    TextField P_E_MAX;
+    @FXML
+    TextField NBB;
+    @FXML
+    TextField NBI;
 
     @FXML
     private void handleButtonCharger(ActionEvent event) throws IOException {
@@ -91,13 +99,16 @@ public class Str2Controller implements Initializable {
         try {
             ln.setTextFill(Color.web("#00FF00"));
             ln.setText("");
-            String SNBE = NBE.getText(), SNBO = NBO.getText(), SMAX = MAX.getText(), SPA = P_A.getText(), SCA = CA.getText(), SPE = P_E.getText();
-            if (SNBE.equals("") || SNBO.equals("") || SMAX.equals("") || SPA.equals("") || SCA.equals("") || SPE.equals("")) {
+            String SNBB=NBB.getText(),SNBI=NBI.getText(), SNBE = NBE.getText(), SNBO = NBO.getText(), SMAX = MAX.getText(), SPAMIN = P_A_MIN.getText(), SPEMIN = P_E_MIN.getText(), SPAMAX = P_A_MAX.getText(), SPEMAX = P_E_MAX.getText(), SCA = CA.getText();
+            if (SNBB.equals("") ||SNBI.equals("") ||SNBE.equals("") || SNBO.equals("") || SMAX.equals("") || SCA.equals("") ||SPAMIN.equals("") || SPEMIN.equals("")||SPAMAX.equals("") || SPEMAX.equals("")) {
                 ln.setTextFill(Color.web("#FF0000"));
                 ln.setText("Erreur champ vide ");
-            }else if ( Integer.parseInt(SNBO) > Integer.parseInt(SNBE)|| Integer.parseInt(SNBE) < 0 || Integer.parseInt(SNBO) < 0|| Integer.parseInt(SMAX) < 0 ||Integer.parseInt(SCA) < 0 || Double.parseDouble(SPA) < 0 || Double.parseDouble(SPA) > 1|| Double.parseDouble(SPE) < 0 || Double.parseDouble(SPE) > 1) {
+            }else if ( Integer.parseInt(SNBO) > Integer.parseInt(SNBE)|| Integer.parseInt(SNBE) < 0 || Integer.parseInt(SNBO) < 0|| Integer.parseInt(SMAX) < 0 ||Integer.parseInt(SCA) < 0 || Double.parseDouble(SPAMIN) < 0 || Double.parseDouble(SPAMIN) > 1|| Double.parseDouble(SPEMIN) < 0 || Double.parseDouble(SPEMIN) > 1|| Double.parseDouble(SPAMAX) < 0 || Double.parseDouble(SPAMAX) > 1|| Double.parseDouble(SPEMAX) < 0 || Double.parseDouble(SPEMAX) > 1|| Double.parseDouble(SPEMAX) > 1|| Double.parseDouble(SPEMIN) > Double.parseDouble(SPEMAX)|| Double.parseDouble(SPAMIN) > Double.parseDouble(SPAMAX)) {
                 ln.setTextFill(Color.web("#FF0000"));
                 ln.setText("Erreur valeurs incohérentes ");
+            }else if(Integer.parseInt(SNBB)>8||Integer.parseInt(SNBO)>256||Integer.parseInt(SNBE)>256){
+                ln.setTextFill(Color.web("#FF0000"));
+                ln.setText("Erreur valeurs depassent les limites ");
             }
             else{
                 //Util.handleButtonLancerSequentiel(SNBE,SNBO,SMAX,SCA,SPA,SPE, tableView, lexec, lval, fileName, pidicateur);

@@ -64,7 +64,7 @@ public class LogResController implements Initializable {
     private void handleButtonAcceuil(ActionEvent event) throws IOException {
         Stage stage;
         stage = (Stage) acceuil.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("TPOPTIM.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("PFE.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

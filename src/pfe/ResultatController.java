@@ -97,7 +97,6 @@ public class ResultatController implements Initializable {
     @FXML
     private void handleButtonLancer(ActionEvent event) throws IOException {
         try {
-            //ln.setTextFill(Color.web("#00FF00"));
             ln.setText("");
             String SNBE = NBE.getText(), SNBO = NBO.getText(), SMAX = MAX.getText(), SPA = P_A.getText(), SCA = CA.getText(), SPE = P_E.getText();
             if (SNBE.equals("") || SNBO.equals("") || SMAX.equals("") || SPA.equals("") || SCA.equals("") || SPE.equals("")) {
@@ -106,6 +105,9 @@ public class ResultatController implements Initializable {
             }else if ( Integer.parseInt(SNBO) > Integer.parseInt(SNBE)|| Integer.parseInt(SNBE) < 0 || Integer.parseInt(SNBO) < 0|| Integer.parseInt(SMAX) < 0 ||Integer.parseInt(SCA) < 0 || Double.parseDouble(SPA) < 0 || Double.parseDouble(SPA) > 1|| Double.parseDouble(SPE) < 0 || Double.parseDouble(SPE) > 1) {
                 ln.setTextFill(Color.web("#FF0000"));
                 ln.setText("Erreur valeurs incohérentes ");
+            }else if(Integer.parseInt(SNBO)>256||Integer.parseInt(SNBE)>256){
+                ln.setTextFill(Color.web("#FF0000"));
+                ln.setText("Erreur valeurs depassent les limites ");
             }
             else{
                 Util.handleButtonLancerSequentiel(SNBE,SNBO,SMAX,SCA,SPA,SPE, tableView, lexec, lval,ln,lw, fileName, pidicateur);
