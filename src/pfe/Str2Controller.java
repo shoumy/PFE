@@ -107,9 +107,13 @@ public class Str2Controller implements Initializable {
     @FXML
     private void handleButtonLancer(ActionEvent event) throws IOException {
         try {
-            ln.setTextFill(Color.web("#000000"));            
+            ln.setTextFill(Color.web("#ffffff"));            
             ln.setText("");
-            String SNBB=NBB.getText(),SNBI=NBI.getText(), SNBE = NBE.getText(), SNBO = NBO.getText(), SMAX = MAX.getText(), SPAMIN = P_A_MIN.getText(), SPEMIN = P_E_MIN.getText(), SPAMAX = P_A_MAX.getText(), SPEMAX = P_E_MAX.getText(), SCA = CA.getText();
+            
+            String SNBB=NBB.getText(),SNBI=NBI.getText(), SMAX = MAX.getText(), SPAMIN = P_A_MIN.getText(), SPEMIN = P_E_MIN.getText(), SPAMAX = P_A_MAX.getText(), SPEMAX = P_E_MAX.getText(), SCA = CA.getText();
+            int inbe;
+            inbe=Integer.parseInt(SNBB)*Integer.parseInt(SNBI);
+            String SNBO=Integer.toString(inbe) ,SNBE=SNBO;
             if (SNBB.equals("") ||SNBI.equals("") ||SNBE.equals("") || SNBO.equals("") || SMAX.equals("") || SCA.equals("") ||SPAMIN.equals("") || SPEMIN.equals("")||SPAMAX.equals("") || SPEMAX.equals("")) {
                 ln.setTextFill(Color.web("#FF0000"));
                 ln.setText("Erreur champ vide ");

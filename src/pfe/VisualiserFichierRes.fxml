@@ -12,29 +12,29 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="hbox" layoutX="5.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="890.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pfe.VisualiserFichierResController">
+<HBox id="mPane" fx:id="hbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="890.0" stylesheets="@MainCSS.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pfe.VisualiserFichierResController">
    <children>
       <Pane prefHeight="525.0" prefWidth="300.0">
          <children>
             <VBox alignment="CENTER" layoutY="-2.0" prefHeight="518.0" prefWidth="294.0" spacing="30.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#handleButtonCharger" text="Charger un fichier résultat">
+                  <Button mnemonicParsing="false" onAction="#handleButtonCharger" prefHeight="45.0" prefWidth="250.0" styleClass="CfrButton">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Label fx:id="lcharge" alignment="CENTER" prefHeight="25.0" prefWidth="294.0" text="Aucun fichier chargé" />
-                  <Label fx:id="lw" alignment="CENTER" prefHeight="25.0" prefWidth="294.0">
+                  <Label fx:id="lcharge" alignment="CENTER" prefHeight="25.0" prefWidth="294.0" text="Aucun fichier chargé" textFill="WHITE" />
+                  <Label fx:id="lw" alignment="CENTER" prefHeight="25.0" prefWidth="294.0" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="ln" alignment="CENTER" prefHeight="25.0" prefWidth="294.0">
+                  <Label fx:id="ln" alignment="CENTER" prefHeight="25.0" prefWidth="294.0" textFill="WHITE">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lcalc">
+                  <Label fx:id="lcalc" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -65,7 +65,7 @@
                         </TableColumn>
                     </columns>
                 </TableView>
-                <Label layoutX="266.0" layoutY="8.0" text="Résultats">
+                <Label layoutX="266.0" layoutY="8.0" text="Résultats" textFill="WHITE">
                     <font>
                         <Font name="Arial" size="27.0" />
                     </font>
@@ -73,39 +73,39 @@
             <Separator layoutX="-4.0" orientation="VERTICAL" prefHeight="518.0" prefWidth="7.0" />
             <Pane layoutX="122.0" layoutY="59.0" prefHeight="138.0" prefWidth="400.0">
                <children>
-                      <Label layoutX="3.0" text="Temps d'exécution:">
+                      <Label layoutX="3.0" text="Temps d'exécution:" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                      <Label fx:id="lexec" layoutX="195.0">
+                      <Label fx:id="lexec" layoutX="195.0" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="4.0" layoutY="51.0" text="Valeur optimale:">
+                  <Label layoutX="4.0" layoutY="51.0" text="Valeur optimale:" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lval" layoutX="195.0" layoutY="51.0">
+                  <Label fx:id="lval" layoutX="195.0" layoutY="51.0" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="4.0" layoutY="94.0" text="Paramètres utilisés:">
+                  <Label layoutX="4.0" layoutY="94.0" text="Paramètres utilisés:" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lp" layoutX="181.0" layoutY="94.0">
+                  <Label fx:id="lp" layoutX="181.0" layoutY="94.0" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
-            <Button fx:id="acceuil" layoutX="287.0" layoutY="460.0" mnemonicParsing="false" onAction="#handleButtonAcceuil" text="Acceuil">
+            <Button fx:id="acceuil" layoutX="253.0" layoutY="451.0" mnemonicParsing="false" onAction="#handleButtonAcceuil" prefHeight="45.0" prefWidth="251.0" styleClass="AcceuilButton">
                <font>
                   <Font size="16.0" />
                </font></Button>

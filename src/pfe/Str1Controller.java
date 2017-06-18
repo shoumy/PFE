@@ -101,16 +101,20 @@ public class Str1Controller implements Initializable {
     @FXML
     private void handleButtonLancer(ActionEvent event) throws IOException {
         try {
-            ln.setTextFill(Color.web("#000000"));
+            ln.setTextFill(Color.web("#ffffff"));
             ln.setText("");
-            String SNBB=NBB.getText(),SNBI=NBI.getText(), SNBE = NBE.getText(), SNBO = NBO.getText(), SMAX = MAX.getText(), SPA = P_A.getText(), SCA = CA.getText(), SPE = P_E.getText();
-            if (SNBB.equals("") ||SNBI.equals("") ||SNBE.equals("") || SNBO.equals("") || SMAX.equals("") || SPA.equals("") || SCA.equals("") || SPE.equals("")) {
+            
+            String SNBB=NBB.getText(),SNBI=NBI.getText(), SMAX = MAX.getText(), SPA = P_A.getText(), SCA = CA.getText(), SPE = P_E.getText();
+            int inbe;
+            inbe=Integer.parseInt(SNBB)*Integer.parseInt(SNBI);
+            String SNBO=Integer.toString(inbe) ,SNBE=SNBO;
+            if (SNBB.equals("") ||SNBI.equals("") || SMAX.equals("") || SPA.equals("") || SCA.equals("") || SPE.equals("")) {
                 ln.setTextFill(Color.web("#FF0000"));
                 ln.setText("Erreur champ vide ");
-            }else if (Integer.parseInt(SNBB)<0||Integer.parseInt(SNBI)<0|| Integer.parseInt(SNBO) > Integer.parseInt(SNBE)|| Integer.parseInt(SNBE) < 0 || Integer.parseInt(SNBO) < 0|| Integer.parseInt(SMAX) < 0 ||Integer.parseInt(SCA) < 0 || Double.parseDouble(SPA) < 0 || Double.parseDouble(SPA) > 1|| Double.parseDouble(SPE) < 0 || Double.parseDouble(SPE) > 1) {
+            }else if (Integer.parseInt(SNBB)<0||Integer.parseInt(SNBI)<0|| Integer.parseInt(SMAX) < 0 ||Integer.parseInt(SCA) < 0 || Double.parseDouble(SPA) < 0 || Double.parseDouble(SPA) > 1|| Double.parseDouble(SPE) < 0 || Double.parseDouble(SPE) > 1) {
                 ln.setTextFill(Color.web("#FF0000"));
                 ln.setText("Erreur valeurs incohérentes ");
-            }else if(Integer.parseInt(SNBB)>8||Integer.parseInt(SNBO)>256||Integer.parseInt(SNBE)>256){
+            }else if(Integer.parseInt(SNBB)>8||Integer.parseInt(SNBB)*Integer.parseInt(SNBI)>256){
                 ln.setTextFill(Color.web("#FF0000"));
                 ln.setText("Erreur valeurs depassent les limites ");
             }

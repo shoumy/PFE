@@ -13,14 +13,14 @@
     <children>
         <Pane id="mPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="890.0" stylesheets="@MainCSS.css">
             <children>
-                <HBox alignment="CENTER" layoutY="442.0" prefHeight="37.0" prefWidth="890.0" spacing="40.0">
+                <HBox alignment="CENTER" layoutY="435.0" prefHeight="44.0" prefWidth="890.0" spacing="40.0">
                     <children>
-                        <Button fx:id="sauv" layoutX="226.0" layoutY="407.0" mnemonicParsing="false" onAction="#handleButtonSauv" prefHeight="37.0" prefWidth="170.0" text="Lancer la génération">
+                        <Button fx:id="sauv" layoutX="226.0" layoutY="407.0" mnemonicParsing="false" onAction="#handleButtonSauv" prefHeight="50.0" prefWidth="250.0" styleClass="LagButton">
                             <font>
                                 <Font size="16.0" />
                             </font>
                         </Button>
-                        <Button fx:id="acceuil" layoutX="500.0" layoutY="407.0" mnemonicParsing="false" onAction="#handleButtonAcceuil" prefHeight="37.0" prefWidth="170.0" text="Acceuil">
+                        <Button fx:id="acceuil" layoutX="500.0" layoutY="407.0" mnemonicParsing="false" onAction="#handleButtonAcceuil" prefHeight="50.0" prefWidth="250.0" styleClass="AcceuilButton">
                             <font>
                                 <Font size="16.0" />
                             </font>
@@ -28,7 +28,7 @@
                     </children>
                 </HBox>
                 <ProgressIndicator fx:id="pidicateur" layoutX="405.0" layoutY="380.0" prefHeight="80.0" prefWidth="80.0" progress="0.0" visible="false" />
-                <Label layoutX="313.0" layoutY="30.0" text="Générateur d'instances">
+                <Label layoutX="313.0" layoutY="30.0" text="Générateur d'instances" textFill="WHITE">
                     <font>
                         <Font name="Arial Bold" size="24.0" />
                     </font>
@@ -42,39 +42,57 @@
                <children>
                   <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                      <children>
-                        <Label text="Instance de coloration simple" />
+                        <Label text="Instance de coloration simple" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
                         <Label fx:id="bname" />
-                        <Button fx:id="bcharger" mnemonicParsing="false" onAction="#handleButtonCharger" text="Charger" />
+                        <Button fx:id="bcharger" mnemonicParsing="false" onAction="#handleButtonCharger" prefHeight="45.0" prefWidth="250.0" styleClass="ChaButton" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
                      <children>
-                        <Label text="Tailles du spectre de fréquences NF" />
-                        <TextField fx:id="NF" text="200" />
+                        <Label text="Tailles du spectre de fréquences NF" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <TextField fx:id="NF" alignment="CENTER" prefHeight="25.0" prefWidth="80.0" text="200" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
                      <children>
-                        <Label text="Nombre minimal de trx par cellule" />
-                        <TextField fx:id="NbTrxMin" text="5" />
+                        <Label text="Nombre minimal de trx par cellule" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <TextField fx:id="NbTrxMin" alignment="CENTER" prefHeight="25.0" prefWidth="80.0" text="5" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" layoutX="10.0" layoutY="132.0" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
                      <children>
-                        <Label text="Nombre maximal de trx par cellule" />
-                        <TextField fx:id="NbTrxMax" text="10" />
+                        <Label text="Nombre maximal de trx par cellule" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <TextField fx:id="NbTrxMax" alignment="CENTER" prefHeight="25.0" prefWidth="80.0" text="10" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
                      <children>
-                        <Label text="Tailles minimale de la liste des fréquences permises" />
-                        <TextField fx:id="fpmin" text="120" />
+                        <Label text="Tailles minimale de la liste des fréquences permises" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <TextField fx:id="fpmin" alignment="CENTER" prefHeight="25.0" prefWidth="80.0" text="120" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" layoutX="10.0" layoutY="208.0" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
                      <children>
-                        <Label text="Tailles maximale de la liste des fréquences permises" />
-                        <TextField fx:id="fpmax" text="150" />
+                        <Label text="Tailles maximale de la liste des fréquences permises" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <TextField fx:id="fpmax" alignment="CENTER" prefHeight="25.0" prefWidth="80.0" text="150" />
                      </children>
                   </HBox>
                </children>

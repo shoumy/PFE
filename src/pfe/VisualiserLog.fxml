@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.control.cell.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox id="VBox" alignment="TOP_CENTER" layoutX="5.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="890.0" spacing="30.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pfe.VisualiserLogController">
+<VBox id="VBox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="890.0" spacing="30.0" stylesheets="@MainCSS.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pfe.VisualiserLogController">
     <children>
-        <Label text="Historique d'exécution">
+        <Label text="Historique d'exécution" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="22.0" />
             </font>
         </Label>
-        <TableView fx:id="tableView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="364.0" prefWidth="783.0">
+        <TableView fx:id="tableView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="714.0">
             <columns>
-                <TableColumn maxWidth="117.0" minWidth="-Infinity" prefWidth="95.0" resizable="false" text="Index">
+                <TableColumn maxWidth="117.0" minWidth="-Infinity" prefWidth="83.0" resizable="false" text="Index">
                     <cellValueFactory>
                         <PropertyValueFactory property="id" />
                     </cellValueFactory>
@@ -28,12 +29,12 @@
                         <PropertyValueFactory property="nom" />
                     </cellValueFactory>
                 </TableColumn>
-                <TableColumn prefWidth="236.0" text="Méthode">
+                <TableColumn prefWidth="177.0" text="Méthode">
                     <cellValueFactory>
                         <PropertyValueFactory property="methode" />
                     </cellValueFactory>
                 </TableColumn>
-                <TableColumn prefWidth="261.0" text="Date d'exécution">
+                <TableColumn prefWidth="263.0" text="Date d'exécution">
                     <cellValueFactory>
                         <PropertyValueFactory property="dateExec" />
                     </cellValueFactory>
@@ -42,7 +43,7 @@
         </TableView>
       <HBox alignment="CENTER" spacing="100.0">
          <children>
-              <Button fx:id="acceuil" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonAcceuil" prefWidth="95.0" text="Acceuil">
+              <Button fx:id="acceuil" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonAcceuil" prefHeight="44.0" prefWidth="250.0" styleClass="AcceuilButton">
                   <font>
                       <Font size="16.0" />
                   </font>

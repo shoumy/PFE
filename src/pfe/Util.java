@@ -223,7 +223,7 @@ public class Util {
             String fileName = selectedFile.getAbsolutePath();
             String filen = selectedFile.getName();
             lcharge.setText(filen + " chargé");
-            lcharge.setTextFill(Color.web("#609000"));
+            lcharge.setTextFill(Color.web("#00FF00"));
             bcal.setDisable(false);
             return fileName;
         }

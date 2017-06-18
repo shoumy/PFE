@@ -6,6 +6,10 @@
     -fx-background-image: url("../photos/Cubaaa.png")no-repeat; 
 }
 
+#VBox {
+    -fx-background-image: url("../photos/Cubaaa.png")no-repeat; 
+}
+
 #mainVb {
     -fx-background-image: url("../photos/CubaFondBlanc.png")no-repeat; 
 }
@@ -71,7 +75,7 @@
  -fx-border-width: 0;
  -fx-background-radius: 0;
  -fx-background-color: transparent;
- -fx-background-image: url('../photos/FichierRésultat.png') no-repeat;
+ -fx-background-image: url('../photos/FichierResultat.png') no-repeat;
 }
 
 .VjButton {
@@ -80,6 +84,71 @@
  -fx-background-radius: 0;
  -fx-background-color: transparent;
  -fx-background-image: url('../photos/VisualiserJournal.png') no-repeat;
+}
+
+.VjButton {
+ -fx-border-color: transparent;
+ -fx-border-width: 0;
+ -fx-background-radius: 0;
+ -fx-background-color: transparent;
+ -fx-background-image: url('../photos/VisualiserJournal.png') no-repeat;
+}
+
+.LcButton {
+ -fx-border-color: transparent;
+ -fx-border-width: 0;
+ -fx-background-radius: 0;
+ -fx-background-color: transparent;
+ -fx-background-image: url('../photos/LancerCalcul.png') no-repeat;
+}
+
+.LagButton {
+ -fx-border-color: transparent;
+ -fx-border-width: 0;
+ -fx-background-radius: 0;
+ -fx-background-color: transparent;
+ -fx-background-image: url('../photos/LancerGene.png') no-repeat;
+}
+
+
+.ChaButton {
+ -fx-border-color: transparent;
+ -fx-border-width: 0;
+ -fx-background-radius: 0;
+ -fx-background-color: transparent;
+ -fx-background-image: url('../photos/Charger.png') no-repeat;
+}
+
+.CfrButton {
+ -fx-border-color: transparent;
+ -fx-border-width: 0;
+ -fx-background-radius: 0;
+ -fx-background-color: transparent;
+ -fx-background-image: url('../photos/ChargerFichierResultat.png') no-repeat;
+}
+
+.PreButton {
+ -fx-border-color: transparent;
+ -fx-border-width: 0;
+ -fx-background-radius: 0;
+ -fx-background-color: transparent;
+ -fx-background-image: url('../photos/Prece.png') no-repeat;
+}
+
+.PreButton {
+ -fx-border-color: transparent;
+ -fx-border-width: 0;
+ -fx-background-radius: 0;
+ -fx-background-color: transparent;
+ -fx-background-image: url('../photos/Prece.png') no-repeat;
+}
+
+.CiButton {
+ -fx-border-color: transparent;
+ -fx-border-width: 0;
+ -fx-background-radius: 0;
+ -fx-background-color: transparent;
+ -fx-background-image: url('../photos/ChargerUneInstance.png') no-repeat;
 }
 
 .QuitterButton {

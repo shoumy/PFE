@@ -13,36 +13,36 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:id="hbox" layoutX="5.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="890.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pfe.LogResController">
+<HBox id="mPane" fx:id="hbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="890.0" stylesheets="@MainCSS.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pfe.LogResController">
    <children>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="294.0" spacing="30.0">
          <children>
-            <Label fx:id="lm" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="295.0">
+            <Label fx:id="lm" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="295.0" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label fx:id="lins" alignment="CENTER" layoutX="10.0" layoutY="65.0" prefHeight="25.0" prefWidth="296.0">
+            <Label fx:id="lins" alignment="CENTER" layoutX="10.0" layoutY="65.0" prefHeight="25.0" prefWidth="296.0" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label fx:id="ldate" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="295.0">
+            <Label fx:id="ldate" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="295.0" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label fx:id="lw" alignment="CENTER" layoutY="138.0" prefHeight="25.0" prefWidth="295.0">
+            <Label fx:id="lw" alignment="CENTER" layoutY="138.0" prefHeight="25.0" prefWidth="295.0" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label fx:id="ln" alignment="CENTER" layoutY="184.0" prefHeight="25.0" prefWidth="301.0">
+            <Label fx:id="ln" alignment="CENTER" layoutY="184.0" prefHeight="25.0" prefWidth="301.0" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label fx:id="lcalc" layoutX="90.0" layoutY="343.0">
+            <Label fx:id="lcalc" layoutX="90.0" layoutY="343.0" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
@@ -53,7 +53,7 @@
             <Insets />
          </HBox.margin>
          <padding>
-            <Insets top="20.0" />
+            <Insets top="50.0" />
          </padding>
       </VBox>
         <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="600.0">
@@ -77,7 +77,7 @@
                         </TableColumn>
                     </columns>
                 </TableView>
-                <Label layoutX="266.0" layoutY="8.0" text="Résultats">
+                <Label layoutX="266.0" layoutY="8.0" text="Résultats" textFill="WHITE">
                     <font>
                         <Font name="Arial" size="27.0" />
                     </font>
@@ -85,43 +85,43 @@
             <Separator orientation="VERTICAL" prefHeight="518.0" prefWidth="7.0" />
             <Pane layoutX="122.0" layoutY="60.0" prefHeight="138.0" prefWidth="400.0">
                <children>
-                      <Label layoutX="3.0" text="Temps d'exécution:">
+                      <Label layoutX="3.0" text="Temps d'exécution:" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                      <Label fx:id="lexec" layoutX="195.0">
+                      <Label fx:id="lexec" layoutX="195.0" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="4.0" layoutY="51.0" text="Valeur optimale:">
+                  <Label layoutX="4.0" layoutY="51.0" text="Valeur optimale:" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lval" layoutX="195.0" layoutY="51.0">
+                  <Label fx:id="lval" layoutX="195.0" layoutY="51.0" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
                </children>
             </Pane>
-            <HBox alignment="CENTER" layoutX="-1.0" layoutY="460.0" prefHeight="37.0" prefWidth="644.0" spacing="100.0">
+            <HBox alignment="CENTER" layoutX="-1.0" layoutY="451.0" prefHeight="41.0" prefWidth="644.0" spacing="30.0">
                <children>
-                  <Button layoutX="287.0" layoutY="460.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonPrecedent" prefWidth="95.0" text="Précédent">
+                  <Button layoutX="287.0" layoutY="460.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonPrecedent" prefHeight="45.0" prefWidth="249.0" styleClass="PreButton">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Button>
-                  <Button fx:id="acceuil" layoutX="10.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonAcceuil" prefWidth="95.0" text="Acceuil">
+                  <Button fx:id="acceuil" layoutX="10.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonAcceuil" prefHeight="47.0" prefWidth="243.0" styleClass="AcceuilButton">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Button>
                </children>
             </HBox>
-            <Label fx:id="lparam" alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="200.0" prefHeight="17.0" prefWidth="591.0" />
+            <Label fx:id="lparam" alignment="CENTER" contentDisplay="CENTER" layoutX="2.0" layoutY="200.0" prefHeight="17.0" prefWidth="591.0" textFill="WHITE" />
             </children>
         </Pane>
    </children>

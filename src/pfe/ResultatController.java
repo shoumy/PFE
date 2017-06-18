@@ -98,7 +98,7 @@ public class ResultatController implements Initializable {
     @FXML
     private void handleButtonLancer(ActionEvent event) throws IOException {
         try {
-            ln.setTextFill(Color.web("#000000"));            
+            ln.setTextFill(Color.web("#ffffff"));            
             ln.setText("");
             String SNBE = NBE.getText(), SNBO = NBO.getText(), SMAX = MAX.getText(), SPA = P_A.getText(), SCA = CA.getText(), SPE = P_E.getText();
             if (SNBE.equals("") || SNBO.equals("") || SMAX.equals("") || SPA.equals("") || SCA.equals("") || SPE.equals("")) {

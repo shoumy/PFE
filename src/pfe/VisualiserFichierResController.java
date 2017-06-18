@@ -86,9 +86,9 @@ public class VisualiserFichierResController implements Initializable {
         File selectedFile = fileChooser.showOpenDialog(stage);
         if (selectedFile != null) {
             fileName = selectedFile.getAbsolutePath();
-            String filen = selectedFile.getName();
-            lcharge.setText(filen + " chargé");
-            lcharge.setTextFill(Color.web("#609000"));
+            //String filen = selectedFile.getName();
+            //lcharge.setText(filen + " chargé");
+            //lcharge.setTextFill(Color.web("#FFFFFF"));
             pidicateur.setVisible(true);
             pidicateur.setProgress(1);
             BufferedReader br = null;
