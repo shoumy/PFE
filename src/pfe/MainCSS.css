@@ -2,6 +2,10 @@
     -fx-background-image: url("../photos/CubaFondBlanc.png")no-repeat; 
 }
 
+#mPane {
+    -fx-background-image: url("../photos/Cubaaa.png")no-repeat; 
+}
+
 #mainVb {
     -fx-background-image: url("../photos/CubaFondBlanc.png")no-repeat; 
 }
@@ -43,7 +47,7 @@
  -fx-border-width: 0;
  -fx-background-radius: 0;
  -fx-background-color: transparent;
- -fx-background-image: url('../photos/VersSeq.png') no-repeat;
+ -fx-background-image: url('../photos/Acceuil.png') no-repeat;
 }
 
 .ResButton {
@@ -51,7 +55,7 @@
  -fx-border-width: 0;
  -fx-background-radius: 0;
  -fx-background-color: transparent;
- -fx-background-image: url('../photos/VersSeq.png') no-repeat;
+ -fx-background-image: url('../photos/Resolve.png') no-repeat;
 }
 
 .GenButton {
@@ -59,7 +63,7 @@
  -fx-border-width: 0;
  -fx-background-radius: 0;
  -fx-background-color: transparent;
- -fx-background-image: url('../photos/VersSeq.png') no-repeat;
+ -fx-background-image: url('../photos/generate.png') no-repeat;
 }
 
 .VfrButton {
@@ -67,7 +71,7 @@
  -fx-border-width: 0;
  -fx-background-radius: 0;
  -fx-background-color: transparent;
- -fx-background-image: url('../photos/VersSeq.png') no-repeat;
+ -fx-background-image: url('../photos/FichierRésultat.png') no-repeat;
 }
 
 .VjButton {
@@ -75,7 +79,7 @@
  -fx-border-width: 0;
  -fx-background-radius: 0;
  -fx-background-color: transparent;
- -fx-background-image: url('../photos/VersSeq.png') no-repeat;
+ -fx-background-image: url('../photos/VisualiserJournal.png') no-repeat;
 }
 
 .QuitterButton {
@@ -83,5 +87,5 @@
  -fx-border-width: 0;
  -fx-background-radius: 0;
  -fx-background-color: transparent;
- -fx-background-image: url('../photos/VersSeq.png') no-repeat;
+ -fx-background-image: url('../photos/Quitter.png') no-repeat;
 }

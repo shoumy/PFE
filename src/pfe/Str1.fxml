@@ -64,9 +64,9 @@
             <HBox alignment="CENTER" layoutX="10.0" layoutY="233.0" spacing="10.0">
                <children>
                   <Label text="NBB" />
-                  <TextField fx:id="NBE1" prefHeight="25.0" prefWidth="60.0" text="8" />
+                  <TextField fx:id="NBB" prefHeight="25.0" prefWidth="60.0" text="8" />
                   <Label layoutX="10.0" layoutY="10.0" text="NBI" />
-                  <TextField fx:id="NBO1" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="60.0" text="32" />
+                  <TextField fx:id="NBI" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="60.0" text="32" />
                </children>
             </HBox>
                <Button fx:id="bcal" disable="true" layoutX="52.0" layoutY="306.0" mnemonicParsing="false" onAction="#handleButtonLancer" text="Lancer le Calcul">

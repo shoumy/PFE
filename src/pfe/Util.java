@@ -595,6 +595,99 @@ public class Util {
             }
         }         
     }
+
+    static void handleButtonLancerSt1(String SNBE, String SNBO, String SMAX, String SCA, String SPA, String SPE, String SNBB, String SNBI, TableView<ObjecBTS> tableView, Label lexec, Label lval, Label ln, Label lw, String fileName, ProgressIndicator pidicateur) {
+        Path path = Paths.get(fileName);
+        StringTokenizer st2 = new StringTokenizer(path.getFileName().toString(), ".");
+        DateFormat dateFormat = new SimpleDateFormat("yyyy MM dd HH mm ss");
+        Date date = new Date();
+        String fichierRes = "Historique/" + st2.nextToken()+"."+st2.nextToken()+"."+st2.nextToken() + "-" + "Colonie gpu Abeille th" + "-" + dateFormat.format(date) + ".fapr";
+        File file = new File(fichierRes);
+        pidicateur.setVisible(true);
+        pidicateur.setProgress(-1);
+
+        Thread thread2 = new Thread() {
+            public void run() {
+                try {
+                    Process process = new ProcessBuilder("Executable/StrPopGpuSolth.exe", fileName,SCA,SNBE,SNBO,SMAX,SPE,SPE,SPA,SPA,fichierRes,SNBB,SNBI).start();
+                } catch (IOException ex) {
+                    Logger.getLogger(ResultatController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        };
+        thread2.start();
+        try {
+            thread2.join();
+            System.out.println("join");
+        } catch (InterruptedException ex) {
+            System.out.println("ici");
+            Logger.getLogger(Util.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        boolean exists = file.exists();
+        System.out.println(exists);
+        
+        while (!exists) {
+            try {
+                TimeUnit.SECONDS.sleep(2);
+            } catch (InterruptedException ex) {
+            }
+            exists = file.exists();
+        }
+        pidicateur.setProgress(1);
+        
+        BufferedReader br = null;
+        ObservableList<ObjecBTS> data = tableView.getItems();
+        data.clear();
+        try {
+            String sCurrentLine;
+            String tmp = SNBE + " " +SNBO + " " + SCA + " " +SMAX+" "+SPE+" "+SPA+" "+" "+SNBB+" "+SNBI+"\n";
+            File mFile = new File(fichierRes);
+            BufferedReader br2 = new BufferedReader(new FileReader(fichierRes));
+            String result = "";
+            String line = "";
+            while ((line = br2.readLine()) != null) {
+                result = result + line + "\n";
+            }
+
+            result = tmp + result;
+
+            mFile.delete();
+            FileOutputStream fos = new FileOutputStream(mFile);
+            fos.write(result.getBytes());
+            fos.flush();
+            
+            br = new BufferedReader(new FileReader(fichierRes));
+            br.readLine();
+            sCurrentLine = br.readLine();
+            StringTokenizer st = new StringTokenizer(sCurrentLine);
+            ln.setText("nb cells:"+st.nextToken()+" nb arrets:"+st.nextToken());
+            lw.setText("nb freq:"+st.nextToken()+" nb trx max:"+st.nextToken());
+            sCurrentLine = br.readLine();
+            lval.setText(sCurrentLine);
+            sCurrentLine = br.readLine();
+            lexec.setText(sCurrentLine + " secondes");
+            
+            String id, d, f;
+            
+            while ((sCurrentLine = br.readLine()) != null) {
+                st = new StringTokenizer(sCurrentLine);
+                id = st.nextToken();
+                d = st.nextToken();
+                f = st.nextToken("");
+              data.add(new ObjecBTS(id, d, f));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (br != null) {
+                    br.close();
+                }
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        } 
+    }
     
     
 
