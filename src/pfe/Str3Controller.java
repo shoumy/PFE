@@ -68,7 +68,6 @@ public class Str3Controller implements Initializable {
     @FXML
     private void handleButtonCharger(ActionEvent event) throws IOException {
         fileName = Util.handleButtonCharger(hbox, lcharge, pidicateur, bcal);
-        pidicateur.setVisible(true);
         ln.setText("");
         lw.setText("");
         lexec.setText("");
@@ -76,6 +75,8 @@ public class Str3Controller implements Initializable {
         for ( int i = 0; i<tableView.getItems().size(); i++) {
             tableView.getItems().clear();
         }
+        pidicateur.setVisible(true);
+        pidicateur.setProgress(-1);
     }
 
     @FXML
@@ -98,6 +99,7 @@ public class Str3Controller implements Initializable {
     @FXML
     private void handleButtonLancer(ActionEvent event) throws IOException {
         try {
+            ln.setTextFill(Color.web("#000000"));            
             ln.setText("");
             String SNBT=NBT.getText(), SNBE = NBE.getText(), SNBO = NBO.getText(), SMAX = MAX.getText(), SPA = P_A.getText(), SCA = CA.getText(), SPE = P_E.getText();
             if (SNBT.equals("") ||SNBE.equals("") || SNBO.equals("") || SMAX.equals("") || SPA.equals("") || SCA.equals("") || SPE.equals("")) {
@@ -114,6 +116,7 @@ public class Str3Controller implements Initializable {
                Util.handleButtonLancerStr3(SNBE,SNBO,SMAX,SCA,SPA,SPE,SNBT, tableView, lexec, lval,ln,lw, fileName, pidicateur);
             }
         } catch (Exception e) {
+            e.printStackTrace();
             ln.setTextFill(Color.web("#FF0000"));
             ln.setText("Erreur valeurs non numérique");
         }

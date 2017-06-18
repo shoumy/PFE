@@ -1,0 +1,87 @@
+#mainVbox {
+    -fx-background-image: url("../photos/CubaFondBlanc.png")no-repeat; 
+}
+
+#mainVb {
+    -fx-background-image: url("../photos/CubaFondBlanc.png")no-repeat; 
+}
+
+.SeqButton {
+ -fx-border-color: transparent;
+ -fx-border-width: 0;
+ -fx-background-radius: 0;
+ -fx-background-color: transparent;
+ -fx-background-image: url('../photos/VersSeq.png') no-repeat;
+}
+
+.St1Button {
+ -fx-border-color: transparent;
+ -fx-border-width: 0;
+ -fx-background-radius: 0;
+ -fx-background-color: transparent;
+ -fx-background-image: url('../photos/Strat1.png') no-repeat;
+}
+
+.St2Button {
+ -fx-border-color: transparent;
+ -fx-border-width: 0;
+ -fx-background-radius: 0;
+ -fx-background-color: transparent;
+ -fx-background-image: url('../photos/Strat12.png') no-repeat;
+}
+
+.St3Button {
+ -fx-border-color: transparent;
+ -fx-border-width: 0;
+ -fx-background-radius: 0;
+ -fx-background-color: transparent;
+ -fx-background-image: url('../photos/strat13.png') no-repeat;
+}
+
+.AcceuilButton {
+ -fx-border-color: transparent;
+ -fx-border-width: 0;
+ -fx-background-radius: 0;
+ -fx-background-color: transparent;
+ -fx-background-image: url('../photos/VersSeq.png') no-repeat;
+}
+
+.ResButton {
+ -fx-border-color: transparent;
+ -fx-border-width: 0;
+ -fx-background-radius: 0;
+ -fx-background-color: transparent;
+ -fx-background-image: url('../photos/VersSeq.png') no-repeat;
+}
+
+.GenButton {
+ -fx-border-color: transparent;
+ -fx-border-width: 0;
+ -fx-background-radius: 0;
+ -fx-background-color: transparent;
+ -fx-background-image: url('../photos/VersSeq.png') no-repeat;
+}
+
+.VfrButton {
+ -fx-border-color: transparent;
+ -fx-border-width: 0;
+ -fx-background-radius: 0;
+ -fx-background-color: transparent;
+ -fx-background-image: url('../photos/VersSeq.png') no-repeat;
+}
+
+.VjButton {
+ -fx-border-color: transparent;
+ -fx-border-width: 0;
+ -fx-background-radius: 0;
+ -fx-background-color: transparent;
+ -fx-background-image: url('../photos/VersSeq.png') no-repeat;
+}
+
+.QuitterButton {
+ -fx-border-color: transparent;
+ -fx-border-width: 0;
+ -fx-background-radius: 0;
+ -fx-background-color: transparent;
+ -fx-background-image: url('../photos/VersSeq.png') no-repeat;
+}

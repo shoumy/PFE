@@ -50,20 +50,20 @@
                   <Label text="MAX" />
                   <TextField fx:id="MAX" prefHeight="25.0" prefWidth="60.0" text="10" />
                   <Label layoutX="10.0" layoutY="10.0" text="CA" />
-                  <TextField fx:id="CA" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="60.0" text="20" />
+                  <TextField fx:id="CA" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="60.0" text="30" />
                </children>
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="278.0" spacing="10.0">
                <children>
                   <Label text="P_A" />
                   <TextField fx:id="P_A" prefHeight="25.0" prefWidth="60.0" text="0.8" />
-                  <Label layoutX="10.0" layoutY="10.0" text="P_E" />
+                  <Label layoutX="10.0" layoutY="10.0" text="P_P" />
                   <TextField fx:id="P_E" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="60.0" text="0.2" />
                </children>
             </HBox>
             <HBox alignment="CENTER" layoutX="10.0" layoutY="323.0" spacing="10.0">
                <children>
-                  <Label text="NB Thread" />
+                  <Label text="NBC" />
                   <TextField fx:id="NBT" prefHeight="25.0" prefWidth="60.0" text="3" />
                </children>
             </HBox>

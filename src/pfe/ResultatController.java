@@ -66,8 +66,7 @@ public class ResultatController implements Initializable {
     @FXML
     private void handleButtonCharger(ActionEvent event) throws IOException {
         fileName = Util.handleButtonCharger(hbox, lcharge, pidicateur, bcal);
-        pidicateur.setVisible(true);
-        pidicateur.setProgress(-1);
+        
         ln.setText("");
         lw.setText("");
         lexec.setText("");
@@ -75,6 +74,8 @@ public class ResultatController implements Initializable {
         for ( int i = 0; i<tableView.getItems().size(); i++) {
             tableView.getItems().clear();
         }
+        pidicateur.setVisible(true);
+        pidicateur.setProgress(-1);
     }
 
     @FXML
@@ -97,6 +98,7 @@ public class ResultatController implements Initializable {
     @FXML
     private void handleButtonLancer(ActionEvent event) throws IOException {
         try {
+            ln.setTextFill(Color.web("#000000"));            
             ln.setText("");
             String SNBE = NBE.getText(), SNBO = NBO.getText(), SMAX = MAX.getText(), SPA = P_A.getText(), SCA = CA.getText(), SPE = P_E.getText();
             if (SNBE.equals("") || SNBO.equals("") || SMAX.equals("") || SPA.equals("") || SCA.equals("") || SPE.equals("")) {
@@ -104,17 +106,17 @@ public class ResultatController implements Initializable {
                 ln.setText("Erreur champ vide ");
             }else if ( Integer.parseInt(SNBO) > Integer.parseInt(SNBE)|| Integer.parseInt(SNBE) < 0 || Integer.parseInt(SNBO) < 0|| Integer.parseInt(SMAX) < 0 ||Integer.parseInt(SCA) < 0 || Double.parseDouble(SPA) < 0 || Double.parseDouble(SPA) > 1|| Double.parseDouble(SPE) < 0 || Double.parseDouble(SPE) > 1) {
                 ln.setTextFill(Color.web("#FF0000"));
-                ln.setText("Erreur valeurs incohérentes ");
+                ln.setText("valeurs incohérentes ");
             }else if(Integer.parseInt(SNBO)>256||Integer.parseInt(SNBE)>256){
                 ln.setTextFill(Color.web("#FF0000"));
-                ln.setText("Erreur valeurs depassent les limites ");
+                ln.setText("valeurs depassent les limites ");
             }
             else{
                 Util.handleButtonLancerSequentiel(SNBE,SNBO,SMAX,SCA,SPA,SPE, tableView, lexec, lval,ln,lw, fileName, pidicateur);
             }
         } catch (Exception e) {
             ln.setTextFill(Color.web("#FF0000"));
-            ln.setText("Erreur valeurs non numérique");
+            ln.setText("valeurs non numérique");
         }
     }
 

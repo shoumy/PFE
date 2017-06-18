@@ -3,6 +3,7 @@ package pfe;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.concurrent.TimeUnit;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -74,7 +75,16 @@ public class Str2Controller implements Initializable {
     @FXML
     private void handleButtonCharger(ActionEvent event) throws IOException {
         fileName = Util.handleButtonCharger(hbox, lcharge, pidicateur, bcal);
+        ln.setText("");
+        lw.setText("");
+        lexec.setText("");
+        lval.setText("");
+        for ( int i = 0; i<tableView.getItems().size(); i++) {
+            tableView.getItems().clear();
+        }
         pidicateur.setVisible(true);
+        pidicateur.setProgress(-1);
+        
     }
 
     @FXML
@@ -97,7 +107,7 @@ public class Str2Controller implements Initializable {
     @FXML
     private void handleButtonLancer(ActionEvent event) throws IOException {
         try {
-            ln.setTextFill(Color.web("#00FF00"));
+            ln.setTextFill(Color.web("#000000"));            
             ln.setText("");
             String SNBB=NBB.getText(),SNBI=NBI.getText(), SNBE = NBE.getText(), SNBO = NBO.getText(), SMAX = MAX.getText(), SPAMIN = P_A_MIN.getText(), SPEMIN = P_E_MIN.getText(), SPAMAX = P_A_MAX.getText(), SPEMAX = P_E_MAX.getText(), SCA = CA.getText();
             if (SNBB.equals("") ||SNBI.equals("") ||SNBE.equals("") || SNBO.equals("") || SMAX.equals("") || SCA.equals("") ||SPAMIN.equals("") || SPEMIN.equals("")||SPAMAX.equals("") || SPEMAX.equals("")) {
@@ -111,7 +121,7 @@ public class Str2Controller implements Initializable {
                 ln.setText("Erreur valeurs depassent les limites ");
             }
             else{
-                //Util.handleButtonLancerSequentiel(SNBE,SNBO,SMAX,SCA,SPA,SPE, tableView, lexec, lval, fileName, pidicateur);
+                Util.handleButtonLancerSt2(SNBE,SNBO,SMAX,SCA,SNBB,SNBI,SPEMIN,SPEMAX,SPAMIN,SPAMAX,tableView, lexec, lval,ln,lw, fileName, pidicateur);
             }
         } catch (Exception e) {
             ln.setTextFill(Color.web("#FF0000"));

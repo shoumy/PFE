@@ -6,37 +6,34 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="BorderPane" fx:id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pfe.PFEController">
+<BorderPane fx:id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="880.0" stylesheets="@MainCSS.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pfe.PFEController">
     <center>
-        <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="890.0" spacing="30.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" BorderPane.alignment="CENTER">
+        <VBox id="mainVb" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="509.0" prefWidth="890.0" spacing="30.0" stylesheets="@MainCSS.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" BorderPane.alignment="CENTER">
             <children>
-                <Button contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonResoudre" prefHeight="45.0" prefWidth="280.0" text="Résoudre une instance" textAlignment="CENTER">
+                <Button contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonResoudre" prefHeight="45.0" prefWidth="250.0" styleClass="ResButton" textAlignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font></Button>
-                <Button fx:id="chargerBench" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonGenerer" prefHeight="45.0" prefWidth="280.0" text="Générer une instance" textAlignment="CENTER">
+                <Button fx:id="chargerBench" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonGenerer" prefHeight="45.0" prefWidth="250.0" styleClass="GenButton" textAlignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font></Button>
-            <Button contentDisplay="CENTER" layoutX="348.0" layoutY="173.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonVisualiserRes" prefHeight="45.0" prefWidth="280.0" text="Visualiser un fichier résultat " textAlignment="CENTER">
+            <Button contentDisplay="CENTER" layoutX="348.0" layoutY="173.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonVisualiserRes" prefHeight="45.0" prefWidth="250.0" styleClass="VfrButton" textAlignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button contentDisplay="CENTER" layoutX="315.0" layoutY="285.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonLog" prefHeight="45.0" prefWidth="280.0" text="Visualiser le journal" textAlignment="CENTER">
+            <Button contentDisplay="CENTER" layoutX="315.0" layoutY="285.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleButtonLog" prefHeight="45.0" prefWidth="250.0" styleClass="VjButton" textAlignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="45.0" prefWidth="280.0" text="Quitter" textAlignment="CENTER">
+            <Button contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="45.0" prefWidth="250.0" styleClass="QuitterButton" textAlignment="CENTER">
                <font>
                   <Font size="20.0" />
                </font>
@@ -45,12 +42,15 @@
          <BorderPane.margin>
             <Insets />
          </BorderPane.margin>
+         <padding>
+            <Insets left="100.0" />
+         </padding>
         </VBox>
     </center>
     <top>
-        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="890.0" BorderPane.alignment="CENTER">
+        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="890.0" BorderPane.alignment="CENTER">
             <children>
-                <MenuBar maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="890.0">
+                <MenuBar maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="892.0">
                     <menus>
                         <Menu mnemonicParsing="false" text="Fichier">
                             <items>
@@ -70,26 +70,6 @@
                   <Insets right="5.0" />
                </VBox.margin>
                 </MenuBar>
-                <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="95.0" prefWidth="890.0" spacing="600.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000;" BorderPane.alignment="CENTER" VBox.vgrow="ALWAYS">
-                    <children>
-                        <ImageView fitHeight="67.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../photos/ESI.png" />
-                            </image>
-                            <HBox.margin>
-                                <Insets />
-                            </HBox.margin>
-                        </ImageView>
-                        <ImageView fitHeight="87.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../photos/paf.png" />
-                            </image>
-                        </ImageView>
-                    </children>
-                    <VBox.margin>
-                        <Insets />
-                    </VBox.margin>
-                </HBox>
             </children>
         </VBox>
     </top>
