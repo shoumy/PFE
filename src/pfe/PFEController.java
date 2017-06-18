@@ -1,5 +1,7 @@
 package pfe;
 
+import java.awt.Desktop;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,7 +16,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-
+import javafx.application.HostServices;
 /**
  *
  * @author Abderrahmane
@@ -43,6 +45,18 @@ public class PFEController implements Initializable {
         Dialog.centerOnScreen();
         Dialog.show();
         Dialog.setResizable(false);
+    }
+    
+    @FXML
+    private void handleButtonManuel(ActionEvent event) throws IOException {
+       if (Desktop.isDesktopSupported()) {
+    try {
+            File myFile = new File("Manuel.pdf");
+            Desktop.getDesktop().open(myFile);
+        } catch (IOException ex) {
+            // no application registered for PDFs
+        }
+    }
     }
 
     @FXML

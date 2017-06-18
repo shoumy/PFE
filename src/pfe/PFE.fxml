@@ -62,6 +62,7 @@
                         </Menu>
                   <Menu mnemonicParsing="false" text="Aide">
                      <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleButtonManuel" text="Manuel d'utilisation" />
                         <MenuItem mnemonicParsing="false" onAction="#handleButtonapropos" text="À Propos" />
                      </items>
                   </Menu>

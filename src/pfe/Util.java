@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -324,17 +325,21 @@ public class Util {
         File file = new File(fichierRes);
         pidicateur.setVisible(true);
         pidicateur.setProgress(-1);
-
+        /*
         Thread thread2 = new Thread() {
             public void run() {
                 try {
                     Process process = new ProcessBuilder("Executable/VersionSequentiel.exe", fileName,SCA,SNBE,SNBO,SMAX,SPE,SPA,fichierRes).start();
+                    InputStream shellIn = process.getInputStream();
+                    int shellExitStatus = process.exitValue();
+                    System.out.println(shellExitStatus);
                 } catch (IOException ex) {
                     Logger.getLogger(ResultatController.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         };
         thread2.start();
+
         try {
             thread2.join();
             System.out.println("join");
@@ -342,6 +347,15 @@ public class Util {
             System.out.println("ici");
             Logger.getLogger(Util.class.getName()).log(Level.SEVERE, null, ex);
         }
+        */
+        try {
+                    Process process = new ProcessBuilder("Executable/VersionSequentiel.exe", fileName,SCA,SNBE,SNBO,SMAX,SPE,SPA,fichierRes).start();
+                    InputStream shellIn = process.getInputStream();
+                    int shellExitStatus = process.exitValue();
+                    System.out.println(shellExitStatus);
+                } catch (IOException ex) {
+                    Logger.getLogger(ResultatController.class.getName()).log(Level.SEVERE, null, ex);
+           }
         boolean exists = file.exists();
         System.out.println(exists);
         

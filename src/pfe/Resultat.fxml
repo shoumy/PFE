@@ -27,12 +27,12 @@
                      <Font size="10.0" />
                   </font>
                </Label>
-               <Label fx:id="ln" alignment="CENTER" layoutY="184.0" prefHeight="25.0" prefWidth="244.0">
+               <Label fx:id="ln" alignment="CENTER" layoutY="184.0" prefHeight="25.0" prefWidth="244.0" textFill="WHITE">
                   <font>
                      <Font size="16.0" />
                   </font>
                </Label>
-               <Label fx:id="lw" alignment="CENTER" layoutY="138.0" prefHeight="25.0" prefWidth="244.0">
+               <Label fx:id="lw" alignment="CENTER" layoutY="138.0" prefHeight="25.0" prefWidth="244.0" textFill="WHITE">
                   <font>
                      <Font size="16.0" />
                   </font>
